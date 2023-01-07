@@ -1,0 +1,20 @@
+{
+    "snakey": {
+        "image": "https://www.stkvalues.com/media/Snakey.png",
+        "value": "20",
+        "tags": [
+            "Halloween 2021",
+            "Common"
+        ],
+        "name": "snakey"
+    },
+    "PerishWithLiquorice": {
+        "image": "https://www.stkvalues.com/media/Perish%20With%20Liquorice.png",
+        "value": "50",
+        "tags": [
+            "Halloween 2022",
+            "Common"
+        ],
+        "name": "Perish With Liquorice"
+    }
+}
