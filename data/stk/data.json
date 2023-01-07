@@ -1,6 +1,6 @@
 {
     "snakey": {
-        "image": "https://www.stkvalues.com/media/Snakey.png",
+        "image": "https://raw.githubusercontent.com/DiscMil/database/main/data/stk/Snakey.png",
         "value": "20",
         "tags": [
             "Halloween 2021",
@@ -9,7 +9,7 @@
         "name": "snakey"
     },
     "PerishWithLiquorice": {
-        "image": "https://www.stkvalues.com/media/Perish%20With%20Liquorice.png",
+        "image": "https://raw.githubusercontent.com/DiscMil/database/main/data/stk/Perish%20With%20Liquorice.png",
         "value": "50",
         "tags": [
             "Halloween 2022",
