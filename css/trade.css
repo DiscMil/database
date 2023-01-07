@@ -1,0 +1,292 @@
+/*! CSS Used from: https://gametools-gg.b-cdn.net/static/css/style.css?v=5 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*! CSS Used from: https://gametools-gg.b-cdn.net/static/css/mining_simulator_2.css?v=3 */
+.calculator-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #23272a;
+    gap: 50px;
+    height: 655px;
+    padding: 20px;
+    margin-top: 60px;
+    color: white;
+}
+
+.value-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: flex-start;
+    row-gap: 50px;
+    column-gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(44, 44, 46, 0.5);
+    height: 450px;
+    overflow-y: scroll;
+    background-color: rgb(37, 37, 38);
+}
+
+.value-panel::-webkit-scrollbar-thumb {
+    background-color: #3bb1fc;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    background-clip: padding-box;
+}
+
+.value-panel::-webkit-scrollbar {
+    width: 16px;
+}
+
+.panel-field {
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 75px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.panel-field.add {
+    background-color: rgba(48, 219, 91, 1.0);
+    font-size: 20px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.panel-field::after {
+    content: "x";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    z-index: 99999;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #293042;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.panel-field.add::after {
+    content: "";
+    padding-right: 0;
+    padding-bottom: 0;
+    background-color: initial;
+}
+
+#panel_search_close {
+    width: 95%;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#inputSearch {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 60%;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    font-weight: 600;
+}
+
+#inputSearch::placeholder {
+    color: #000;
+}
+
+#close_panel {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.panel-all-pets {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: calc(50% - 20px);
+    height: 542px;
+    background-color: #2c2f33;
+    z-index: 99999999;
+}
+
+.panel-all-pets-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+    height: 460px;
+    overflow-y: scroll;
+}
+
+.panel-all-pets-grid::after {
+    content: "";
+    flex: auto;
+}
+
+.panel-pet-box {
+    position: relative;
+    height: 170px;
+    width: 105px;
+    cursor: pointer;
+    display: flex;
+}
+
+.panel-pet-box .card {
+    background-color: initial;
+}
+
+.panel-pet-box .card-header {
+    background-color: initial;
+    padding: 0;
+}
+
+.panel-pet-box .card-header h2 {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    height: 36px;
+}
+
+.panel-pet-box .card-body {
+    padding: 10px;
+}
+
+.panel-choose-rarity {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #140a51;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.panel-btn-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: initial;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.panel-rarities {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 105px;
+}
+
+.panel-rarities button {
+    background-color: initial;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: left;
+}
+
+.panel-pet-amount {
+    display: none;
+    grid-template-columns: 1fr;
+    width: 105px;
+    gap: 20px;
+}
+
+.panel-pet-amount input {
+    width: 100%;
+}
+
+.panel-pet-amount button {
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #767676;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#trade_status_me, #trade_status_you {
+    height: 52px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#value_total_me, #value_total_you {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.img-fluid {
+    height: auto;
+    max-width: 100%;
+}
+
+@media screen and (max-width:740px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .panel-all-pets {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .value-panel {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .panel-all-pets {
+        height: 460px;
+    }
+
+    .panel-all-pets-grid {
+        height: 440px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .value-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
